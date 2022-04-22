@@ -1,0 +1,87 @@
+body{
+    background-color: #F9FCFB;
+}
+
+.container{
+    width: 100%;
+    margin: 50px auto;
+}
+
+.col-1{
+    height: 64px;
+}
+
+form{
+    margin: 50px auto;
+}
+
+h3{
+    font-family: 'Libre Baskerville', serif;
+    font-size: 2rem;
+    letter-spacing: 4px;
+    text-align: center;
+    font-weight: 800;
+    margin-top: 50px;
+    color: rgb(181,49,59);
+
+}
+
+.form-control, .form-select{
+    background-color: #F9FCFB;
+    color: #94481c;
+    border: 2px solid rgba(78, 23, 28, 0.301);
+   
+}
+
+img{
+    width: 40px;
+}
+
+#kitchen{
+    margin: 0 auto;
+    width: 40%;
+}
+
+#metricVolume, #metricWeight{
+    background-color: #F9FCFB;
+}
+
+.row{
+    margin: inherit auto;
+}
+
+@media screen and (max-width: 768px) {
+    .col-2, .col-3{
+        width: 40%;
+    }
+
+    .lower{
+        margin-left: 13%;
+    }
+    
+    .col-1{
+        margin-right: 5%;
+    }
+}
+
+@media screen and (max-width: 321px){
+    .col-1 {
+        width: 100%;
+        text-align: center;
+    }
+
+    .col-2, .col-3, .lower{
+        width: 50%;
+        margin-left: 0;
+    }
+
+    .form-control, .form-select{
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 214px){
+    h3{
+        font-size: 1.25rem;
+    }
+}
