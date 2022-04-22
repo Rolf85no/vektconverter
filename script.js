@@ -39,7 +39,7 @@ const converter = {
         convertNoMeasures:function(measureType, measure){
             switch(measureType){
                 case 'kg':
-                    this.noMeasure.value = measure.toFixed(2) / 1000;
+                    this.noMeasure.value = (measure/ 1000).toFixed(2);
                     break;
                 
                 case 'gram':
@@ -47,7 +47,7 @@ const converter = {
                     break;
 
                 case 'liter':
-                    this.noVolume.value = measure.toFixed(2) / 10;
+                    this.noVolume.value = (measure/10).toFixed(2);
                     break;
 
                 case 'dl':
