@@ -6,31 +6,24 @@ const converter = {
     measureTypeUs:document.getElementById('usWeightType'),
     measureTypeNo:document.getElementById('metricWeightType'),
         getWeight:function(usMeasure){
-            converter.convertUsMeasures(this.measureTypeUs.value, usMeasure);
-            
+            converter.convertUsMeasures(this.measureTypeUs.value, usMeasure);  
         },
         getVolume:function(usaVolume){
            converter.convertUsMeasures(this.volumeTypeUs.value, usaVolume);
         },
-        convertUsMeasures:function(measureType, measure){ 
-            let convertedMeasure;           
+        convertUsMeasures:function(measureType, measure){         
             switch(measureType){
                 case 'pound':
-                    convertedMeasure = 453 * measure;
-                    converter.convertNoMeasures(this.measureTypeNo.value, convertedMeasure);
+                    converter.convertNoMeasures(this.measureTypeNo.value, 453 * measure);
                     break;
                 case 'oz':
-                    convertedMeasure = 28.3 * measure;
-                    converter.convertNoMeasures(this.measureTypeNo.value, convertedMeasure);
-                    break;
-                    
+                    converter.convertNoMeasures(this.measureTypeNo.value, 28.3 * measure);
+                    break;  
                 case 'cup':
-                    convertedMeasure = 2.36 * measure;
-                    converter.convertNoMeasures(this.volumeTypeNo.value, convertedMeasure);
+                    converter.convertNoMeasures(this.volumeTypeNo.value, 2.36 * measure);
                     break;
                 case 'fluid':
-                    convertedMeasure = 0.29 * measure;
-                    converter.convertNoMeasures(this.volumeTypeNo.value, convertedMeasure);
+                    converter.convertNoMeasures(this.volumeTypeNo.value, 0.29 * measure);
                     break;
                       
             }
@@ -40,16 +33,13 @@ const converter = {
             switch(measureType){
                 case 'kg':
                     this.noMeasure.value = (measure/ 1000).toFixed(2);
-                    break;
-                
+                    break;   
                 case 'gram':
                     this.noMeasure.value = measure.toFixed(1);
                     break;
-
                 case 'liter':
                     this.noVolume.value = (measure/10).toFixed(2);
                     break;
-
                 case 'dl':
                     this.noVolume.value = measure.toFixed(1);
                     break;
